@@ -3,10 +3,31 @@
 -- Add any additional keymaps here
 local Util = require("lazyvim.util")
 
-local function map(mode, lhs, rhs, desc)
-  vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true, desc = desc })
+local function map_leader(mode, lhs, rhs, desc)
+  vim.keymap.set(mode, "<leader>" .. lhs, rhs, { noremap = true, silent = true, desc = desc })
+end
+local function map(mode, lhs, rhs)
+  vim.keymap.set(mode, lhs, rhs, { noremap = true, silent = true })
 end
 
-map("n", "<leader>gl", function()
+-- Move lazygit keybind
+map_leader("n", "gl", function()
   Util.float_term({ "lazygit" }, { cwd = Util.get_root(), esc_esc = false })
 end, "Lazygit (root dir)")
+
+-- Easier tab switching
+map_leader("n", "j", "<cmd>bprev<cr>", "Previous Buffer")
+map_leader("n", "k", "<cmd>bnext<cr>", "Next Buffer")
+
+-- Clear Search
+map_leader("n", "sx", "<cmd>nohl<cr>", "Clear Search Highlight")
+
+-- Don't yank when deleting single character
+map("n", "x", '"_x')
+
+-- Better counting
+map("n", "+", "<C-a>")
+map("n", "-", "<C-x>")
+
+-- Select all
+map("n", "<C-a>", "gg<S-v>G")
