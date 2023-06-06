@@ -3,9 +3,8 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       local icons = require("lazyvim.config").icons
-      local disabled = { "dashboard", "alpha" }
 
-      opts.options.disabled_filetypes.winbar = { "dashboard", "alpha", "neo-tree" }
+      opts.options.disabled_filetypes.winbar = { "dashboard", "alpha", "neo-tree", "Outline" }
 
       opts.winbar = {
         lualine_a = { "filename" },
@@ -34,7 +33,7 @@ return {
         { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
       }
 
-      opts.extensions = { "neo-tree" }
+      -- opts.extensions = { "neo-tree", "symbols-outline", "lazy", "nvim-dap-ui", "trouble" }
     end,
   },
 }
