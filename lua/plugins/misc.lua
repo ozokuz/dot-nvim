@@ -23,6 +23,7 @@ return {
   },
   {
     "echasnovski/mini.splitjoin",
+    enabled = false,
     opts = { mappings = { toggle = "<leader>j" } },
     keys = { { "<leader>j", desc = "Split/Join" } },
   },
