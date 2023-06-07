@@ -15,19 +15,11 @@ map_leader("n", "gl", function()
   Util.float_term({ "lazygit" }, { cwd = Util.get_root(), esc_esc = false })
 end, "Lazygit (root dir)")
 
--- Easier tab switching
-map_leader("n", "j", "<cmd>bprev<cr>", "Previous Buffer")
-map_leader("n", "k", "<cmd>bnext<cr>", "Next Buffer")
-
 -- Clear Search
 map_leader("n", "sx", "<cmd>nohl<cr>", "Clear Search Highlight")
 
 -- Don't yank when deleting single character
 map("n", "x", '"_x')
-
--- Better counting
-map("n", "+", "<C-a>")
-map("n", "-", "<C-x>")
 
 -- Select all
 map("n", "<C-a>", "gg<S-v>G")

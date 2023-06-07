@@ -4,3 +4,15 @@
 vim.o.title = true
 vim.o.scrolloff = 8
 vim.o.hlsearch = true
+
+vim.opt.fillchars = {
+  foldopen = "",
+  foldclose = "",
+  fold = " ",
+  foldsep = " ",
+  diff = "╱",
+  eob = " ",
+}
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
