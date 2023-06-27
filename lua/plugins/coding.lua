@@ -157,4 +157,9 @@ return {
       vim.keymap.set("v", "d", "d<cmd>AutolistRecalculate<cr>")
     end,
   },
+  {
+    "chrisgrieser/nvim-recorder",
+    event = "VimEnter",
+    opts = {},
+  },
 }

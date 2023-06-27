@@ -33,7 +33,12 @@ return {
         { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
       }
 
-      -- opts.extensions = { "neo-tree", "symbols-outline", "lazy", "nvim-dap-ui", "trouble" }
+      opts.sections.lualine_y = {
+        { require("recorder").displaySlots, separator = " ", padding = { left = 1, right = 0 } },
+        { require("recorder").recordingStatus, separator = " ", padding = { left = 1, right = 0 } },
+        { "progress", separator = " ", padding = { left = 1, right = 0 } },
+        { "location", padding = { left = 0, right = 1 } },
+      }
     end,
   },
 }
