@@ -142,15 +142,9 @@ return {
       vim.keymap.set("n", "<CR>", "<cmd>AutolistToggleCheckbox<cr><CR>")
       vim.keymap.set("n", "<C-r>", "<cmd>AutolistRecalculate<cr>")
 
-      -- cycle list types with dot-repeat
       vim.keymap.set("n", "<leader>cn", require("autolist").cycle_next_dr, { expr = true })
       vim.keymap.set("n", "<leader>cp", require("autolist").cycle_prev_dr, { expr = true })
 
-      -- if you don't want dot-repeat
-      -- vim.keymap.set("n", "<leader>cn", "<cmd>AutolistCycleNext<cr>")
-      -- vim.keymap.set("n", "<leader>cp", "<cmd>AutolistCycleNext<cr>")
-
-      -- functions to recalculate list on edit
       vim.keymap.set("n", ">>", ">><cmd>AutolistRecalculate<cr>")
       vim.keymap.set("n", "<<", "<<<cmd>AutolistRecalculate<cr>")
       vim.keymap.set("n", "dd", "dd<cmd>AutolistRecalculate<cr>")
@@ -161,5 +155,23 @@ return {
     "chrisgrieser/nvim-recorder",
     event = "VimEnter",
     opts = {},
+  },
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
+    "numToStr/Comment.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      }
+    end,
+  },
+  {
+    "echasnovski/mini.comment",
+    enabled = false,
   },
 }
