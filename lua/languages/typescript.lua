@@ -26,4 +26,19 @@ return {
       },
     },
   },
+  {
+    "axelvc/template-string.nvim",
+    ft = { "typescript", "javascript", "typescriptreact", "javas" },
+    opts = {},
+  },
+  {
+    "marilari88/twoslash-queries.nvim",
+    enabled = false,
+    ft = { "typescript", "typescriptreact" },
+    config = function()
+      require("lazyvim.util").on_attach(function(client, buf)
+        require("twoslash-queries").attach(client, buf)
+      end)
+    end,
+  },
 }
