@@ -123,4 +123,36 @@ return {
       },
     },
   },
+  {
+    "ThePrimeagen/harpoon",
+    opts = {},
+    keys = {
+      {
+        "<C-n>",
+        function()
+          require("harpoon.ui").nav_prev()
+        end,
+      },
+      {
+        "<C-m>",
+        function()
+          require("harpoon.ui").nav_next()
+        end,
+      },
+      {
+        "<leader>hh",
+        function()
+          require("harpoon.ui").toggle_quick_menu()
+        end,
+        desc = "Harpoon Menu",
+      },
+      {
+        "<leader>ht",
+        function()
+          require("harpoon.mark").toggle_file()
+        end,
+        desc = "Toggle Mark",
+      },
+    },
+  },
 }
