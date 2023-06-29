@@ -76,6 +76,7 @@ return {
   },
   {
     "toppair/peek.nvim",
+    enabled = false,
     build = "deno task --quiet build:fast",
     keys = {
       {
