@@ -28,7 +28,7 @@ return {
   },
   {
     "axelvc/template-string.nvim",
-    ft = { "typescript", "javascript", "typescriptreact", "javas" },
+    ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
     opts = {},
   },
   {
