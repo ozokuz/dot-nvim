@@ -20,10 +20,11 @@ return {
     end,
   },
   {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local null_ls = require("null-ls")
-      table.insert(opts.sources, null_ls.builtins.formatting.ocamlformat)
-    end,
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        ["ocaml"] = { "ocamlformat" },
+      },
+    },
   },
 }
