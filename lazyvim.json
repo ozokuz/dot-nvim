@@ -2,6 +2,7 @@
   "extras": [
     "dap.core",
     "editor.navic",
+    "editor.symbols-outline",
     "formatting.black",
     "formatting.prettier",
     "lang.clangd",
