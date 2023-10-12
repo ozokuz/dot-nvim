@@ -75,26 +75,6 @@ return {
     end,
   },
   {
-    "toppair/peek.nvim",
-    enabled = false,
-    build = "deno task --quiet build:fast",
-    keys = {
-      {
-        "<leader>mp",
-        function()
-          local peek = require("peek")
-          if peek.is_open() then
-            peek.close()
-          else
-            peek.open()
-          end
-        end,
-        desc = "Markdown Preview",
-      },
-    },
-    config = true,
-  },
-  {
     "uga-rosa/ccc.nvim",
     event = "BufReadPost",
     opts = {

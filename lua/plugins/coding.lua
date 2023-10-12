@@ -69,27 +69,6 @@ return {
     opts = { snippet_engine = "luasnip" },
   },
   {
-    "gbprod/yanky.nvim",
-    enabled = false,
-    event = "VeryLazy",
-    opts = {
-      highlight = { timer = 150 },
-      ring = { storage = "memory" },
-    },
-    keys = {
-      {
-        "<leader>p",
-        function()
-          require("telescope").extensions.yank_history.yank_history({})
-        end,
-        desc = "Clipboard History",
-      },
-      { "y", "<Plug>(YankyYank)" },
-      { "p", "<Plug>(YankyPutAfter)" },
-      { "P", "<Plug>(YankyPutBefore)" },
-    },
-  },
-  {
     "monaqa/dial.nvim",
     keys = {
       {
