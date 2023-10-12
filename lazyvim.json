@@ -1,5 +1,22 @@
 {
   "extras": [
+    "dap.core",
+    "formatting.black",
+    "formatting.prettier",
+    "lang.clangd",
+    "lang.cmake",
+    "lang.docker",
+    "lang.elixir",
+    "lang.go",
+    "lang.json",
+    "lang.python",
+    "lang.python-semshi",
+    "lang.ruby",
+    "lang.rust",
+    "lang.tailwind",
+    "lang.typescript",
+    "linting.eslint",
+    "test.core"
   ],
   "news": {
     "NEWS.md": "2035"
