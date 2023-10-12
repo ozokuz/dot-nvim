@@ -1,6 +1,7 @@
 {
   "extras": [
     "dap.core",
+    "editor.navic",
     "formatting.black",
     "formatting.prettier",
     "lang.clangd",
