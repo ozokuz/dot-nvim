@@ -151,10 +151,6 @@ return {
     end,
   },
   {
-    "echasnovski/mini.comment",
-    enabled = false,
-  },
-  {
     "smjonas/inc-rename.nvim",
     opts = {},
     keys = { { "<leader>r", ":IncRename ", desc = "Rename Symbol" } },
