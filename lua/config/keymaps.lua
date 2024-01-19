@@ -12,7 +12,7 @@ end
 
 -- Move lazygit keybind
 map_leader("n", "gl", function()
-  Util.float_term({ "lazygit" }, { cwd = Util.get_root(), esc_esc = false })
+  Util.terminal.open("lazygit", { cwd = Util.root.get(), esc_esc = false })
 end, "Lazygit (root dir)")
 
 -- Clear Search
