@@ -128,15 +128,51 @@ return {
     opts = {},
     keys = {
       {
-        "<C-n>",
+        "<C-y>",
         function()
           require("harpoon.ui").nav_prev()
         end,
       },
       {
-        "<C-m>",
+        "<C-u>",
         function()
           require("harpoon.ui").nav_next()
+        end,
+      },
+      {
+        "<C-f>",
+        function()
+          require("harpoon.ui").nav_file(1)
+        end,
+      },
+      {
+        "<C-d>",
+        function()
+          require("harpoon.ui").nav_file(2)
+        end,
+      },
+      {
+        "<C-g>",
+        function()
+          require("harpoon.ui").nav_file(3)
+        end,
+      },
+      {
+        "<C-m>",
+        function()
+          require("harpoon.ui").nav_file(4)
+        end,
+      },
+      {
+        "<C-n>",
+        function()
+          require("harpoon.ui").nav_file(5)
+        end,
+      },
+      {
+        "<C-b>",
+        function()
+          require("harpoon.ui").nav_file(6)
         end,
       },
       {
@@ -147,7 +183,7 @@ return {
         desc = "Harpoon Menu",
       },
       {
-        "<leader>ht",
+        "<leader>hf",
         function()
           require("harpoon.mark").toggle_file()
         end,
