@@ -7,11 +7,11 @@ return {
     "folke/zen-mode.nvim",
     opts = {
       on_open = function()
-        require("lualine").hide({ place = { "winbar" } })
+        require("lualine").hide({ place = { "winbar" }, unhide = false })
         vim.o.winbar = ""
       end,
       on_close = function()
-        require("lualine").hide({ unhide = true })
+        require("lualine").hide({ unhide = true, place = { "winbar" } })
       end,
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
