@@ -1,6 +1,7 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
     opts = function(_, opts)
       opts.window.mappings["l"] = "open"
     end,
@@ -9,12 +10,14 @@ return {
     "stevearc/oil.nvim",
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    keys = { {
-      "<leader>fd",
-      function()
-        require("oil").open()
-      end,
-      desc = "Directory Editor",
-    } },
+    keys = {
+      {
+        "<leader>fd",
+        function()
+          require("oil").open()
+        end,
+        desc = "Directory Editor",
+      },
+    },
   },
 }
