@@ -1,4 +1,6 @@
-if vim.fn.has("win32") == 1 then
+return {}
+
+--[[ if vim.fn.has("win32") == 1 then
   return {}
 end
 
@@ -41,4 +43,4 @@ return {
       return opts
     end,
   },
-}
+} ]]
