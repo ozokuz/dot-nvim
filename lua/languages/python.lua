@@ -7,8 +7,8 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = { "pylint" },
-    },
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, { "pylint" })
+    end,
   },
 }
