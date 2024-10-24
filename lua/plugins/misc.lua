@@ -123,72 +123,72 @@ return {
       },
     },
   },
-  {
-    "ThePrimeagen/harpoon",
-    opts = {},
-    keys = {
-      {
-        "<C-y>",
-        function()
-          require("harpoon.ui").nav_prev()
-        end,
-      },
-      {
-        "<C-u>",
-        function()
-          require("harpoon.ui").nav_next()
-        end,
-      },
-      {
-        "<C-f>",
-        function()
-          require("harpoon.ui").nav_file(1)
-        end,
-      },
-      {
-        "<C-d>",
-        function()
-          require("harpoon.ui").nav_file(2)
-        end,
-      },
-      {
-        "<C-g>",
-        function()
-          require("harpoon.ui").nav_file(3)
-        end,
-      },
-      {
-        "<C-m>",
-        function()
-          require("harpoon.ui").nav_file(4)
-        end,
-      },
-      {
-        "<C-n>",
-        function()
-          require("harpoon.ui").nav_file(5)
-        end,
-      },
-      {
-        "<C-b>",
-        function()
-          require("harpoon.ui").nav_file(6)
-        end,
-      },
-      {
-        "<leader>hh",
-        function()
-          require("harpoon.ui").toggle_quick_menu()
-        end,
-        desc = "Harpoon Menu",
-      },
-      {
-        "<leader>hf",
-        function()
-          require("harpoon.mark").toggle_file()
-        end,
-        desc = "Toggle Mark",
-      },
-    },
-  },
+  -- {
+  --   "ThePrimeagen/harpoon",
+  --   opts = {},
+  --   keys = {
+  --     {
+  --       "<C-y>",
+  --       function()
+  --         require("harpoon.ui").nav_prev()
+  --       end,
+  --     },
+  --     {
+  --       "<C-u>",
+  --       function()
+  --         require("harpoon.ui").nav_next()
+  --       end,
+  --     },
+  --     {
+  --       "<C-f>",
+  --       function()
+  --         require("harpoon.ui").nav_file(1)
+  --       end,
+  --     },
+  --     {
+  --       "<C-d>",
+  --       function()
+  --         require("harpoon.ui").nav_file(2)
+  --       end,
+  --     },
+  --     {
+  --       "<C-g>",
+  --       function()
+  --         require("harpoon.ui").nav_file(3)
+  --       end,
+  --     },
+  --     {
+  --       "<C-m>",
+  --       function()
+  --         require("harpoon.ui").nav_file(4)
+  --       end,
+  --     },
+  --     {
+  --       "<C-n>",
+  --       function()
+  --         require("harpoon.ui").nav_file(5)
+  --       end,
+  --     },
+  --     {
+  --       "<C-b>",
+  --       function()
+  --         require("harpoon.ui").nav_file(6)
+  --       end,
+  --     },
+  --     {
+  --       "<leader>hh",
+  --       function()
+  --         require("harpoon.ui").toggle_quick_menu()
+  --       end,
+  --       desc = "Harpoon Menu",
+  --     },
+  --     {
+  --       "<leader>hf",
+  --       function()
+  --         require("harpoon.mark").toggle_file()
+  --       end,
+  --       desc = "Toggle Mark",
+  --     },
+  --   },
+  -- },
 }

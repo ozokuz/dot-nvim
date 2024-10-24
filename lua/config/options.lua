@@ -18,3 +18,4 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.foldcolumn = "1"
 vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.deprecation_warnings = true
