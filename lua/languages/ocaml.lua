@@ -1,22 +1,18 @@
+return {}
+
+--[[
+--
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        ocamllsp = {},
-      },
-    },
-  },
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "ocaml-lsp", "ocamlformat" })
+      vim.list_extend(opts.ensure_installed, { "ocamlformat" })
     end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "ocaml", "ocaml_interface" })
+      vim.list_extend(opts.ensure_installed, { "ocaml_interface" })
     end,
   },
   {
@@ -28,3 +24,4 @@ return {
     },
   },
 }
+--]]
